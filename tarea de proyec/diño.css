@@ -1,0 +1,128 @@
+ 
+   /* Fondo de la página */
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('fondo1.jpg') no-repeat center center fixed;
+      background-size: cover; /* Ajusta la imagen al tamaño completo */
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+   /* Banner */
+    .banner {
+      animation: moverDerecha 3s ease-out forwards;
+    }
+
+
+
+
+    /* Animación: desde la derecha hasta el centro */
+    @keyframes moverDerecha {
+      from {
+        transform: translateX(1000px); /* empieza fuera de la pantalla a la derecha */
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);      /* termina en el centro */
+        opacity: 1;
+      }
+    }
+
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+   
+
+   
+
+   /* Menú de navegación */
+    .navbar {
+      display:flex;
+  flex-direction:row;          /* Menú horizontal */
+  justify-content:flex-end;    /* Alineado a la derecha */
+  gap:90px;                    /* Espacio de 90px entre enlaces */
+  padding:0 40px;              /* Espacio interno a los lados */
+  position:fixed;
+  top:0;
+  right:0;
+  height:1cm;
+  background:rgba(0,0,0,0.5);
+  border-radius:0 0 8px 8px;
+  align-items:center;
+  width:auto;                  /* Solo ocupa lo necesario */
+  max-width:calc(100% - 80px); /* Deja 89px libres a cada lado */
+    z-index:10;                  /* Encima del fondo */
+    }
+    
+    .navbar a {
+      color: rgb(221, 11, 11);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.1s ease;
+    }
+    /* Imagen izquierda */
+    .img-left {
+      position: fixed;
+      bottom: 0.1cm;   /* distancia desde abajo */
+      left: 1.5cm;     /* distancia desde el borde izquierdo */
+       width: 1400px; 
+      border-radius: 12px;
+      height: 450px;
+      animation: moverIzquierda 2s ease-out forwards;
+
+    }
+
+    /* Imagen derecha */
+    .img-right {
+      position: fixed;
+      bottom: 1cm;   /* distancia desde abajo */
+      right: 1.5cm;    /* distancia desde el borde derecho */
+      width: 580px;  /* tamaño ajustable */
+      border-radius: 12px;
+      height: 460px;
+      animation: moverDerecha 2s ease-out forwards;
+
+    }
+    /* Animaciones */
+    @keyframes moverBanner {
+      from {
+        transform: translateY(-300px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes moverIzquierda {
+      from {
+        transform: translateX(-300px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes moverDerecha {
+      from {
+        transform: translateX(300px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    

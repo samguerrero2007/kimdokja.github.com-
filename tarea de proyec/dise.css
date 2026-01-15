@@ -1,0 +1,119 @@
+
+  /* Fondo de la página */
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('fondo1.jpg') no-repeat center center fixed;
+      background-size: cover; /* Ajusta la imagen al tamaño completo */
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+     /* Menú de navegación */
+    .navbar {
+      display:flex;
+  flex-direction:row;          /* Menú horizontal */
+  justify-content:flex-end;    /* Alineado a la derecha */
+  gap:90px;                    /* Espacio de 90px entre enlaces */
+  padding:0 40px;              /* Espacio interno a los lados */
+  position:fixed;
+  top:0;
+  right:0;
+  height:1cm;
+  background:rgba(0,0,0,0.5);
+  border-radius:0 0 8px 8px;
+  align-items:center;
+  width:auto;                  /* Solo ocupa lo necesario */
+  max-width:calc(100% - 80px); /* Deja 89px libres a cada lado */
+    z-index:10;                  /* Encima del fondo */
+    }
+    .text-area {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+
+    .gallery-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .image-box {
+      width: 100%;
+      max-width: 250px;
+      background-color: #000;
+      border: 2px solid #444;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-caption {
+      background-color: #000;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+    }
+   .gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+  gap: 20px;
+  padding: 0 20px;
+  padding-bottom: 3cm; /* ← espacio de 3 cm al final */
+}
+.image-box {
+  width: 100%;          /* ocupa todo el ancho disponible */
+  max-width: 240px;     /* límite máximo de ancho */
+  background-color: #000;
+  border: 2px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;          /* la imagen se adapta al ancho del contenedor */
+  height: 300px;        /* altura fija para uniformidad */
+  object-fit: cover;    /* recorta la imagen para llenar el espacio sin deformarse */
+  display: block;
+}
+.gallery-loop {
+  overflow: hidden;        /* oculta lo que se sale */
+  width: 100%;             /* ocupa todo el ancho */
+  background: #000;        /* fondo negro */
+}
+
+.gallery-track {
+  display: flex;
+  width: calc(300px * 10); /* ancho total (5 imágenes x2) */
+  animation: scroll 25s linear infinite; /* animación infinita */
+}
+
+.gallery-track img {
+  width:280px;
+  height: 350px;
+  object-fit: cover;
+  margin-right: 20px;      /* espacio entre imágenes */
+  border-radius: 10px;
+  border: 2px solid #444;
+}
+
+/* Animación: mueve todo el track de derecha a izquierda */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

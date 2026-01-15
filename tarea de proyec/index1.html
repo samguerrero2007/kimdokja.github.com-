@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>home</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index1</title>
+   <link rel="stylesheet" href="diseño.css">
+</head>
+</head>
+<body>
+<script>
+// Estilos básicos de bienvenida
+document.body.style.cssText = `
+  margin:0;height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  background:black;color:white;font-family:Arial,sans-serif;
+`;
+
+// Pedir datos
+let nombre = prompt("¿Cuál es tu nombre?");
+let genero = prompt("Elige tu género: masculino / femenino");
+
+// Género
+const saludo = genero === "masculino" ? "Bienvenido" : "Bienvenida";
+const imagenSrc = genero === "masculino" ? "masculino.png" : "femenino.png";
+
+// Bienvenida inicial
+document.body.innerHTML = `<h1>¡Hola!, ${saludo} ${nombre}!</h1>
+<img src="${imagenSrc}" alt="Imagen de bienvenida"
+     style="width:10cm;height:14cm;object-fit:cover;margin-top:20px">`;
+
+// Después de 4 segundos mostrar página principal
+setTimeout(() => {
+  // Fondo con imagen PNG ocupando toda la pantalla
+  document.body.style.cssText = `
+    margin:0;height:100vh;
+    background:url('primero.gif') no-repeat center center fixed;
+    background-size:cover;
+    color:white;font-family:Arial,sans-serif;
+  `;
+
+  // Contenido principal con menú a la derecha
+  document.body.innerHTML = `
+<nav class="navbar" style="
+  display:flex;
+  flex-direction:row;          /* Menú horizontal */
+  justify-content:flex-end;    /* Alineado a la derecha */
+  gap:90px;                    /* Espacio de 90px entre enlaces */
+  padding:0 40px;              /* Espacio interno a los lados */
+  position:fixed;
+  top:0;
+  right:0;
+  height:1cm;
+  background:rgba(0,0,0,0.5);
+  border-radius:0 0 8px 8px;
+  align-items:center;
+  width:auto;                  /* Solo ocupa lo necesario */
+  max-width:calc(100% - 80px); /* Deja 89px libres a cada lado */
+  .navbar a:hover {
+      color: #ff4444;
+">
+
+  <a href="index1.html" style="color:white;text-decoration:none;">Home</a>
+  <a href="2.html" style="color:white;text-decoration:none;">story</a>
+  <a href="3.html" class="active-tab" style="color:white;text-decoration:none;">character</a>
+  <a href="4.html" style="color:white;text-decoration:none;">gallery</a>
+  <a href="5.html" style="color:white;text-decoration:none;">Gameplay</a>
+</nav>
+  `;
+}, 4000); // 4 segundos
+</script>
+</body>
+</html>

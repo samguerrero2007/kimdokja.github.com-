@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>character</title>
+   <link rel="stylesheet" href="es.css">
+</head>
+<body>
+
+  <!-- menu -->
+  <nav class="navbar
+  ">
+  <a href="index1.html" style="color:white;text-decoration:none;">Home</a>
+  <a href="2.html" style="color:white;text-decoration:none;">story</a>
+  <a href="3.html" class="active-tab" style="color:white;text-decoration:none;">character</a>
+  <a href="4.html" style="color:white;text-decoration:none;">gallery</a>
+  <a href="5.html" style="color:white;text-decoration:none;">Gameplay</a>
+</nav>
+<nav>
+ <!-- Banner debajo del menú -->
+  <div class="banner">
+   <center><img src="james.gif" alt="Banner decorativo" width="1450px" height="208px" style="background: #000; border-radius: 22px"></center>
+  </div>
+</nav>
+  <div class="page">
+    <!-- Mitad superior (blanca) -->
+    <div class="top-half">
+      <!-- Cuadros de texto a la izquierda -->
+      <div class="text-boxes">
+        <div class="text-box">
+            <br>
+          <h2>Adrian Brighton</h2>
+          <p> introvertivo, observador , amante del dibujo sufre de acoso pero lo soporto o eso quiere creer </p>
+        </div>
+            <div class="text-box">
+            <br>
+          <h2>Margaret Fairchild</h2>
+          <p>comprensiva ,amable muy sabia los estudiantes la aprecian mucho,por eso acuden a ella en caso de problemas </p>
+        </div>
+        <div class="text-box">
+            <br>
+          <h2>James Riddle</h2>
+          <p>sociable, amable,inteligente ,solia ser un bully pero recapacito en los ultimos años y ahora hace  lo contrario a molestar y es muy popular </p>
+        </div>
+
+        <div class="text-box">
+            <br>
+          <h2>Jorge Bennett</h2>
+          <p>introvertido,alegre ,leal,el es el apoyo emocional de adrian junto a Emily y le en canta la musica es su via de escape de la realidad </p>
+        </div><div class="text-box">
+            <br>
+          <h2>Isabel Brighton</h2>
+          <p>calmada,  elegante ,vive preocupada de su buena  apariencia ,trata de comprender a sus hijos o eso les dice a sus amistades </p>
+        </div>
+        <div class="text-box">
+            <br>
+          <h2>Emily Bell</h2>
+          <p>reservada,sensible ante los gritos pero no es cobarde aprecia mucho a adrien y Jorge ya que son los primero que tiene </p>
+        </div>
+        <div class="text-box">
+            <br>
+          <h2>Catalina Brighton</h2>
+          <p>manipuladora , presumida y egoista sabe como ganarse el favor de la gente prefiere su reputacion antes que su hermano mayor  </p>
+        </div>
+        <div class="text-box">
+            <br>
+          <h2>Lucy Appleton</h2>
+          <p>violenta,egoista, siempre suele molestar a las chicas mas deviles su blanco preferido es Emily vive preocupada de su apariencia   </p>
+        </div>
+        <div class="text-box">
+            <br>
+          <h2>Damian Thorne</h2>
+          <p>experto manipulador, egocéntrico ,dominante ,es el mejor estudiante del colegio pero nadie sabe como es realmente puede hacer lo que quiera y nadie dudara de el </p>
+        </div>
+        </div>
+      <!-- Carrusel a la derecha -->
+      <div class="carousel-container" onclick="nextSlide()">
+        <div class="carousel-track" id="carousel">
+          <div class="slide"><img src="principal-removebg-preview.png" alt="Imagen 1"><div class="img-name">Margaret Fairchild</div></div>
+          <div class="slide"><img src="chi1.png" alt="Imagen 2"><div class="img-name">James Riddle</div></div>
+          <div class="slide"><img src="chi2-Photoroom.png" alt="Imagen 3"><div class="img-name">Adrian Brighton</div></div>
+          <div class="slide"><img src="chi3-Photoroom.png" alt="Imagen 4"><div class="img-name">jorge bennett</div></div>
+          <div class="slide"><img src="re-Photoroom-Photoroom.png" alt="Imagen 5"><div class="img-name">isabel Brighton</div></div>
+          <div class="slide"><img src="emely.png" alt="Imagen 6"><div class="img-name">Emily Bell</div></div>
+          <div class="slide"><img src="chi6-Photoroom.png" alt="Imagen 7"><div class="img-name">Catalina Brighton</div></div>
+          <div class="slide"><img src="chi7.png" alt="Imagen 7"><div class="img-name">Lucy Appleton</div></div>
+          <div class="slide"><img src="chi8.png" alt="Imagen 7"><div class="img-name">Damian Thorne</div></div>
+    
+        </div>
+      </div>
+    </div>
+   <!-- Mitad inferior (negra) -->
+<div class="bottom-half">
+  <!-- Contenedor para texto + imagen -->
+  <div class="sinopsis-contenedor">
+    <div class="sinopsis-texto">
+      <h2>Sinopsis</h2>
+      <p>
+        “En un mundo donde la soledad pesa más que los golpes, un chico acosado encuentra fuerza en su único amigo… 
+        hasta que surge un inesperado salvador, pero también las sombras de quienes nunca dejaron de atormentarlo.”
+      </p>
+    </div>
+    <!-- Imagen al lado -->
+    <div class="sinopsis-imagen">
+      <img src="primero.gif" alt="Imagen relacionada" />
+    </div>
+  </div>
+</div>
+<center>
+<h2>Juega aquí</h2>
+<iframe src="https://scratch.mit.edu/projects/934174914/embed" 
+  allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" 
+  allowfullscreen></iframe>
+</center>
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const totalSlides = 9;
+    const slideWidth = 390; // Debe coincidir con el ancho definido en CSS
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      const offset = -slideWidth * currentIndex;
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  </script>
+</body>
+</html>
+ 

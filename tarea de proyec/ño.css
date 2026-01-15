@@ -1,0 +1,147 @@
+  /* Fondo de la página */
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('fondo1.jpg') no-repeat center center fixed;
+      background-size: cover; /* Ajusta la imagen al tamaño completo */
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+  
+ /* Banner */
+    .banner {
+      animation: moverDerecha 3s ease-out forwards;
+    }
+
+ /* Animación: desde la derecha hasta el centro */
+    @keyframes moverDerecha {
+      from {
+        transform: translateX(1000px); /* empieza fuera de la pantalla a la derecha */
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);      /* termina en el centro */
+        opacity: 1;
+      }
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+   /* Menú de navegación */
+    .navbar {
+      display:flex;
+  flex-direction:row;          /* Menú horizontal */
+  justify-content:flex-end;    /* Alineado a la derecha */
+  gap:90px;                    /* Espacio de 90px entre enlaces */
+  padding:0 40px;              /* Espacio interno a los lados */
+  position:fixed;
+  top:0;
+  right:0;
+  height:1cm;
+  background:rgba(0,0,0,0.5);
+  border-radius:0 0 8px 8px;
+  align-items:center;
+  width:auto;                  /* Solo ocupa lo necesario */
+  max-width:calc(100% - 80px); /* Deja 89px libres a cada lado */
+    z-index:10;                  /* Encima del fondo */
+    }
+    body {
+  background-color: #000;   /* fondo oscuro */
+  color: white;             /* letras blancas */
+  margin: 0;
+  padding: 20px;            /* espacio interno para que nada toque los bordes */
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Contenedor de textos lado a lado */
+.text-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;                /* separación entre columnas */
+  margin-bottom: 40px;      /* espacio debajo de los textos */
+}
+
+.section-left, .section-right {
+  flex: 1;                  /* cada sección ocupa el mismo ancho */
+}
+
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 20px;            /* espacio interno para que nada toque los bordes */
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 20px;            /* espacio interno para que nada toque los bordes */
+  font-family: Arial, sans-serif;
+}
+
+.section-right {
+  margin-bottom: 40px;
+}
+
+.section-right h2 {
+  text-align: right;
+}
+
+.image-row {
+  display: flex;            /* imágenes en fila */
+  justify-content: flex-start; /* alineadas a la izquierda */
+  gap: 15px;                /* espacio entre imágenes */
+  margin-top: 1cm;          /* separación respecto al texto */
+}
+
+.image-row img {
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: contain;      /* muestra la imagen completa sin recortar */
+  border-radius: 8px;
+  background-color: #222;   /* fondo para rellenar si sobra espacio */
+  padding: 5px;
+}
+.text-video {
+  display: flex;                /* coloca texto y video en fila */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;                    /* separación entre texto y video */
+  margin-top: 20px;             /* separación respecto al banner */
+  margin-bottom: 40px;
+}
+
+.text-block {
+  flex: 1;                      /* el texto ocupa espacio a la izquierda */
+}
+
+.video-block {
+  flex: 1;                      /* el video ocupa espacio a la derecha */
+  display: flex;
+  justify-content: flex-end;    /* asegura que el video se pegue a la derecha */
+}
